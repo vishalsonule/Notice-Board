@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/userpannel.css">
+
+</head>
+<header>
+<div id="profile" class="tabcontent">
+  <h1>Profile</h1>
+  <p>student name</p>
+</div>
+
+<div id="notice" class="tabcontent">
+  <h1>Notice board</h1>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="edit" class="tabcontent">
+  <h1>edit profile</h1>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="logout" class="tabcontent">
+  <h1>Logout</h1>
+  <p>Oslo is the capital of Norway.</p>
+</div>
+
+<a href="Profile" target="iframe"><button class="tablink" onclick="openTab('profile', this, 'red')" id="defaultOpen">profile</button></a>
+<a href="notice.html" target="iframe"><button class="tablink" onclick="openTab('notice', this, 'green')">Notice</button></a>
+<a href="EditProfile" target="iframe"><button class="tablink" onclick="openTab('edit', this, 'blue')">edit profile</button></a>
+<a href="StudLogout" target="iframe"><button class="tablink">Logout</button></a>
+<script src="js/userpannel.js">
+
+</script>
+
+     
+</header>
+<section>
+<iframe height="550px" width="100%" name="iframe"></iframe>
+</section>
+<footer>
+<div align="center">&copy;copyright2018</div>
+<div align="center">School of Computational siences SRTMU Nanded</div>
+</footer>
+</html> 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 20%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+
+#profile {background-color:red;}
+#notice {background-color:green;}
+#edit {background-color:blue;}
+#logout{background-color:orange;}
+#addnotice{background-color:pink;}
+footer{
+background-color:green;
+color:white;
+text-align:center;
+display:block;
+}
+</style>
+
+</head>
+<header>
+<div id="profile" class="tabcontent">
+  <h1>Profile</h1>
+  <p>student name</p>
+</div>
+
+<div id="notice" class="tabcontent">
+  <h1>Notice board</h1>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="addnotice" class="tabcontent">
+  <h1>Add Notice</h1>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="edit" class="tabcontent">
+  <h1>edit profile</h1>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="logout" class="tabcontent">
+  <h1>Logout</h1>
+  <p>Oslo is the capital of Norway.</p>
+</div>
+
+<a href="StaffPro" target="iframe"><button class="tablink" onclick="openTab('profile', this, 'red')" id="defaultOpen">profile</button></a>
+<a href="notice.html" target="iframe"><button class="tablink" onclick="openTab('notice', this, 'green')"> View Notice</button></a>
+<a href="AddNotice.html" target="iframe"><button class="tablink" onclick="openTab('addnotice', this, 'pink')"> Add Notice</button></a>
+<a href="StaffEditProfile" target="iframe"><button class="tablink" onclick="openTab('edit', this, 'blue')">edit profile</button></a>
+<a href="StaffLogout" target="iframe"><button class="tablink" onclick="openTab('logout', this, 'orange')">Logout</button></a>
+<script>
+function openTab(cityName,elmnt,color) {
+// Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+	
+	// Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+	// Show the specific tab content
+    document.getElementById(cityName).style.display = "block";
+	
+	// Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+     
+</header>
+<section>
+<iframe height="550px" width="100%" name="iframe"></iframe>
+</section>
+<footer>
+<div align="center">&copy;copyright2018</div>
+<div align="center">School of Computational siences SRTMU Nanded</div>
+</footer>
+</html> 
